@@ -1,0 +1,44 @@
+{
+	"AWSTemplateFormatVersion": "2010-09-09",
+	"Description": "" 
+	"Parameters":
+	{
+		"Clustersize": 
+		{
+			"Description": "Number of worker nodes in the Swarm (0-1000)." ,
+			"Default": "5" ,
+			"Maxvalue": "1000" ,
+			"Minvalue": "0" ,
+			"Type": "Number" ,
+		},
+		
+		
+		"Enable daily resource cleanup": 
+		{
+			"Description": "Cleans up unused images, containers, networks and volumes",
+			"Allowedvalues": ["Yes", "No"] ,
+			"Default": "No",
+			"Type": "String",
+		},
+		
+			
+		"Use Cloudwatch for container logging":
+		{
+			"Description": "Send all Container logs to CloudWatch",
+			"Allowedvalues": ["Yes", "No"],
+			"Default": "no",
+			"Type": "String",
+		},
+		
+		"Create EFS prerequsities for CloudStor":
+		{
+			"Description": "Create CloudStor EFS mount targets",
+			"Allowedvalues" : ["yes", "No"],
+			"Default": "No",
+			"Type": "String",
+		},
+		
+		""
+		
+			}	
+		
